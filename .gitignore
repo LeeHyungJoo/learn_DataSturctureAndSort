@@ -36,3 +36,5 @@
 .vs/DataSturctureAndSort/v17/Browse.VC.db-wal
 .vs/DataSturctureAndSort/v17/Browse.VC.opendb
 .vs/DataSturctureAndSort/v17/ipch/AutoPCH/b189b701ab5d873/DATASTURCTUREANDSORT.ipch
+*.vsidx
+*.ipch
