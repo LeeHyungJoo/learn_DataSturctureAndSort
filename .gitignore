@@ -1,0 +1,38 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+.vs/DataSturctureAndSort/FileContentIndex/cd8cc476-aacb-46da-a7df-1733a818491e.vsidx
+.vs/DataSturctureAndSort/v17/Browse.VC.db
+.vs/DataSturctureAndSort/v17/Browse.VC.db-shm
+.vs/DataSturctureAndSort/v17/Browse.VC.db-wal
+.vs/DataSturctureAndSort/v17/Browse.VC.opendb
+.vs/DataSturctureAndSort/v17/ipch/AutoPCH/b189b701ab5d873/DATASTURCTUREANDSORT.ipch
