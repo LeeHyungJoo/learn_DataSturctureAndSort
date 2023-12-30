@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#include "CList.h"
+#include "CVector.h"
 
 int main()
 {
