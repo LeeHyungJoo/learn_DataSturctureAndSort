@@ -19,7 +19,7 @@ public:
 
 		_size = 0;
 		_capacity = newcap == 0 ? 5 : newcap;
-		_data = new T[_capacity];
+		_data = (T*)malloc(sizeof(T) * _capacity);
 	}
 
 	//fill constructor
