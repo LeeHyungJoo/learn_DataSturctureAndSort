@@ -5,10 +5,14 @@
 template<typename T>
 class CList
 {
-	struct node<T>
+public:
+	CList<T>() {};
+	~CList<T>() {};
+
+	struct node
 	{
 		T data;
-		struct node<T>* prev;
-		struct node<T>* next;
+		struct node* prev;
+		struct node* next;
 	};
 };

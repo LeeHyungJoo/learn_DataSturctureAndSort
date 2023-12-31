@@ -49,3 +49,10 @@
 .vs/DataSturctureAndSort/v16/.suo
 .vs/VSWorkspaceState.json
 .vs/slnx.sqlite-journal
+*.tlog
+*.log
+*.recipe
+*.ilk
+*.pdb
+x64/Debug/DataSturctureAndSort.vcxproj.FileListAbsolute.txt
+*.idb
