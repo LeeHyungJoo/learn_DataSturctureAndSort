@@ -14,7 +14,7 @@ public:
 		if (_data != nullptr)
 		{
 			newcap = capacity();
-			delete[] _data;
+			free(_data);
 		}
 
 		_size = 0;
@@ -29,7 +29,7 @@ public:
 		if (_data != nullptr)
 		{
 			newcap = capacity();
-			delete[] _data;
+			free(_data);
 		}
 
 		if (newcap < size)
@@ -49,7 +49,7 @@ public:
 		if (_data != nullptr)
 		{
 			newcap = capacity();
-			delete[] _data;
+			free(_data);
 		}
 
 		if (newcap < inits.size())
