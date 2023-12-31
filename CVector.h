@@ -71,13 +71,18 @@ public:
 		auto cap = capacity();
 		if (cap < _size + 1)
 		{
-			auto new_data = (T*)malloc(sizeof(T) * cap * 2);
+			auto next_cap = cap * 2;
+			//printf("cap : %d, next_cap : %d, ")
+			auto new_data = (T*)malloc(sizeof(T) * (_size + 1));
 			for (int i = 0; i < _size; i++)
 				new_data[i] = _data[i];
 
 			new_data[_size++] = value;
-			_data = (T*)malloc(sizeof(*new_data));
+			free(_data);
+
+			_data = (T*)malloc(sizeof(T) * next_cap);
 			move(new_data, new_data + _size, _data);
+			_capacity = next_cap;
 		}
 		else
 		{
