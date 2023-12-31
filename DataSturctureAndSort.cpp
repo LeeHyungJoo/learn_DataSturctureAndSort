@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	CVector<int> cVec({ 5,9,2,3,1 });
+	CVector<int> cVec(10);
 
 	for (int i = 0; i < cVec.size(); i++)
 	{

@@ -23,7 +23,7 @@ public:
 	}
 
 	//fill constructor
-	CVector(size_t size, T value)
+	CVector(size_t size, T value = T())
 	{
 		size_t newcap = 0;
 		if (_data != nullptr)
@@ -72,7 +72,6 @@ public:
 		if (cap < _size + 1)
 		{
 			auto next_cap = cap * 2;
-			//printf("cap : %d, next_cap : %d, ")
 			auto new_data = (T*)malloc(sizeof(T) * (_size + 1));
 			for (int i = 0; i < _size; i++)
 				new_data[i] = _data[i];
