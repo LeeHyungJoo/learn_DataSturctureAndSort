@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include <utility>
+#include <assert.h>
 
 using namespace std;
 
@@ -91,6 +92,8 @@ public:
 
 	void pop_back()
 	{
+		assert(_size > 0);
+
 		_data[--_size] = NULL;
 	}
 
@@ -111,11 +114,17 @@ public:
 
 	T& at(size_t index)
 	{
+		assert(index >= 0);
+		assert(index < _size);
+
 		return _data[index];
 	}
 	
 	T& operator[](size_t index)
 	{
+		assert(index >= 0);
+		assert(index < _size);
+
 		return _data[index];
 	}
 

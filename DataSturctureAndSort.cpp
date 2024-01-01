@@ -20,6 +20,7 @@ int main()
 
 	cVec.pop_back();
 	cVec.pop_back();
+	cout << cVec.at(10)  <<endl;
 
 	for (int i = 0; i < cVec.size(); i++)
 	{

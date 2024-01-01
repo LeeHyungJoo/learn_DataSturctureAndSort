@@ -56,3 +56,4 @@
 *.pdb
 x64/Debug/DataSturctureAndSort.vcxproj.FileListAbsolute.txt
 *.idb
+.vs/DataSturctureAndSort/v17/.suo
