@@ -78,11 +78,12 @@ public:
 				new_data[i] = _data[i];
 
 			new_data[_size++] = value;
-			free(_data);
 
-			_data = (T*)malloc(sizeof(T) * next_cap);
+			_data = (T*)realloc(_data, sizeof(T) * next_cap);
 			move(new_data, new_data + _size, _data);
 			_capacity = next_cap;
+
+			free(new_data);
 		}
 		else
 		{
