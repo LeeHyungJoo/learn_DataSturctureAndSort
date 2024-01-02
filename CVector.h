@@ -78,6 +78,35 @@ public:
 				new_data[i] = _data[i];
 
 			new_data[_size++] = value;
+			_data = (T*)realloc(_data, sizeof(T) * next_cap);
+			move(new_data, new_data + _size, _data);
+	
+			_capacity = next_cap;
+
+			free(new_data);
+		}
+		else
+		{
+			_data[_size++] = value;
+		}
+	}
+
+	void insert(size_t position, T value)
+	{
+		assert(_size + 1 > position);
+
+		auto cap = capacity();
+		if (cap < _size + 1)
+		{
+			auto next_cap = cap * 2;
+			auto new_data = (T*)malloc(sizeof(T) * (_size + 1));
+			for (int i = 0; i < position; i++)
+				new_data[i] = _data[i];
+
+			new_data[position] = value;
+
+			for (int i = position + 1; i < _size + 1; i++)
+				new_data[i] = _data[i - 1];
 
 			_data = (T*)realloc(_data, sizeof(T) * next_cap);
 			move(new_data, new_data + _size, _data);
@@ -87,8 +116,21 @@ public:
 		}
 		else
 		{
-			_data[_size++] = value;
+			for (int i = position + 1; i < _size + 1; i++)
+				_data[i] = _data[i - 1];
+			_data[position] = value;
 		}
+	}
+
+	void remove(size_t position)
+	{
+		assert(_size > 0);
+		assert(_size > position);
+
+		for (int i = position; i < _size - 1; i++)
+			_data[i] = _data[i + 1];
+
+		_size--;
 	}
 
 	void pop_back()

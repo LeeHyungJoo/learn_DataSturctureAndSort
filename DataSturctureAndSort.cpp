@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	CVector<int> cVec(10);
+	CVector<int> cVec(10, 1);
 
 	for (int i = 0; i < cVec.size(); i++)
 	{
@@ -31,14 +31,18 @@ int main()
 
 	cout << "push_back several times" << endl;
 
-	for (int i = 0; i < 200; i++)
-	{
-		cVec.push_back(i);
-		cout << "push_back " << endl;
-		printf("size : %d\n", (int)cVec.size());
-		printf("capacity : %d\n", (int)cVec.capacity());
-	}
-	
+	cVec.insert(3, 9999);
+	cVec.insert(7, 9999);
 
+	cout << "remove" << endl;
+	cVec.remove(7);
+	cVec.remove(3);
+
+
+	cout << "all - - - - - -" << endl;
+	for (int i = 0; i < cVec.size(); i++)
+	{
+		cout << cVec[i] << endl;
+	}
 }
 
